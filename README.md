@@ -1,4 +1,4 @@
-# dsc unilag app
+# DSC Unilag App
 
 🔥🔥🔥 The Developer Student Club, Unilag. App is finally here.
 
