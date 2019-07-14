@@ -1,6 +1,8 @@
-# dsc_unilag_app
+# dsc unilag app
 
-A new Flutter application.
+🔥🔥🔥 The Developer Student Club, Unilag. App is finally here.
+
+This awesome Mobile App was created for Developer Student Clubs in Unilag as a profile and a platform to showcase what they're upto in events, outreach to local businesses and showcases and most importantly their success stories to the world.
 
 ## Getting Started
 
