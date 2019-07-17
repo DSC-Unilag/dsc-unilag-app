@@ -1,15 +1,20 @@
-import 'package:dsc_unilag_app/pages/home.dart';
+import 'package:dsc_unilag_app/blocs/AppBloc.dart';
+import 'package:dsc_unilag_app/pages/index.dart';
 import 'package:dsc_unilag_app/themes/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class DSCUnilagApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'DSC Unilag',
-      initialRoute: '/',
-      onGenerateRoute: _getRoute,
-      theme: _kDSCTheme,
+    return BlocProvider(
+      bloc: AppBloc(),
+      child: MaterialApp(
+        title: 'DSC Unilag',
+        initialRoute: '/',
+        onGenerateRoute: _getRoute,
+        theme: _kDSCTheme,
+      ),
     );
   }
 
@@ -18,7 +23,7 @@ class DSCUnilagApp extends StatelessWidget {
       case '/':
         return MaterialPageRoute(
           settings: settings,
-          builder: (BuildContext context) => HomePage(),
+          builder: (BuildContext context) => IndexPage(),
           fullscreenDialog: false,
         );
         break;
