@@ -52,6 +52,7 @@ flutter:
   assets:
   - assets/images/logo/icon.png
   - assets/images/diversity.png
+  - assets/images/logo/DSC.svg
 
   fonts:
   - family: Roboto
