@@ -1,4 +1,4 @@
-import 'package:dsc_unilag_app/components/dsc_app_bar.dart';
+import 'package:dsc_unilag_app/widgets/dsc_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class IndexPage extends StatelessWidget {
