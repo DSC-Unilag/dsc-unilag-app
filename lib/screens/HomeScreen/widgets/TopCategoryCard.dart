@@ -11,10 +11,10 @@ class TopCategoryCard extends StatelessWidget {
   @override
   Widget build (BuildContext context) {
     return Container(
-      width: 280,
+      width: 300,
       child: Card(
         clipBehavior: Clip.antiAlias,
-        elevation: 3,
+        elevation: 2,
         child: ListTile(
             leading: Container(
               width: 50,

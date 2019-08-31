@@ -1,6 +1,7 @@
 import 'package:dsc_unilag_app/widgets/DSCAppBar.dart';
 import 'package:dsc_unilag_app/screens/HomeScreen/widgets/SortButton.dart';
 import 'package:dsc_unilag_app/screens/HomeScreen/widgets/TopCategoryCard.dart';
+import 'package:dsc_unilag_app/screens/HomeScreen/widgets/PostList.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -49,6 +50,7 @@ class IndexPage extends StatelessWidget {
                 children: <Widget>[
                      Container(
                          height: 23,
+                         margin: EdgeInsets.only(bottom: 5),
                          child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: <Widget>[
@@ -96,7 +98,8 @@ class IndexPage extends StatelessWidget {
                                             );
                                         }).toList(),
                                     )
-                                )
+                                ),
+                                PostList(list: 'recent_post')
                             ]
                         )
                     )
