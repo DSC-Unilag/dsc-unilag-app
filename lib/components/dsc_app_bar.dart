@@ -2,16 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DSCAppBar extends StatelessWidget implements PreferredSizeWidget {
-  DSCAppBar(
-      {Key key,
-      this.leading,
-      this.title,
-      this.actions,
-      this.bottom,
-      this.elevation})
-      : preferredSize = Size.fromHeight(
-            kToolbarHeight + (bottom?.preferredSize?.height ?? 0.0)),
-        super(key: key);
 
   final Widget leading;
   final Widget title;
@@ -19,28 +9,69 @@ class DSCAppBar extends StatelessWidget implements PreferredSizeWidget {
   final PreferredSizeWidget bottom;
   final double elevation;
 
+  DSCAppBar(
+      {
+        Key key,
+        this.leading,
+        this.title,
+        this.actions,
+        this.bottom,
+        this.elevation
+      })
+      : preferredSize = Size.fromHeight(
+            kToolbarHeight + (bottom?.preferredSize?.height ?? 0.0)),
+            super(key: key);
+
+ 
+
   @override
   final Size preferredSize;
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      leading: leading,
-      title: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-              padding: EdgeInsets.all(4.0),
-              child: SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg',
-                  width: 18, height: 18)),
-          title,
-        ],
-      ),
-      actions: actions,
-      centerTitle: true,
-      elevation: elevation,
-      bottom: bottom,
+    return Container(
+		constraints: BoxConstraints(minHeight: 150, maxHeight: 150),
+		decoration: BoxDecoration(
+			color: Colors.white,
+			boxShadow: <BoxShadow>[
+				BoxShadow(
+					color: Colors.grey[300],
+					blurRadius: 15.0,
+					spreadRadius: 5.0,
+					offset: Offset(0, 1)
+				)
+			]
+		),
+		child: Row(
+			crossAxisAlignment: CrossAxisAlignment.center,
+			children: <Widget>[
+				Expanded(
+				child: leading,
+				flex: 1
+				),
+				Expanded(
+				flex: 3,
+				child: Row(
+					mainAxisAlignment: MainAxisAlignment.spaceAround,
+					children: <Widget>[
+					Container(
+						padding: EdgeInsets.all(4.0),
+						child: SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg',
+							width: 13, height: 13)
+					),
+					title
+					]
+				),
+				),
+				Expanded(
+				flex: 1,
+				child:  Row(
+					mainAxisAlignment: MainAxisAlignment.start,
+					children: actions
+				)
+				)
+			]
+		),
     );
   }
 }

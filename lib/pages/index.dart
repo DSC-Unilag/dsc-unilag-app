@@ -4,24 +4,34 @@ import 'package:flutter/material.dart';
 class IndexPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: DSCAppBar(
-        leading: IconButton(icon: Icon(Icons.search), onPressed: () {}),
-        title: Text(
-          'Developer Student Clubs',
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.brightness_3),
-            onPressed: () {},
+    return SafeArea(
+      child: Scaffold(
+        appBar: DSCAppBar(
+          leading: IconButton(icon: Icon(Icons.search), onPressed: () {}),
+          title: Text(
+            'Developer Student Clubs',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           ),
-          IconButton(
-            icon: Icon(Icons.more_vert),
-            onPressed: () {},
-          )
-        ],
-      ),
+          actions: <Widget>[
+            Expanded(
+              flex: 1,
+              child: IconButton(
+                icon: Icon(Icons.brightness_3),
+                onPressed: () {},
+                padding: EdgeInsets.all(0),
+              ),   
+            ),
+            Expanded(
+              flex: 1,
+              child: IconButton(
+                icon: Icon(Icons.more_vert),
+                onPressed: () {},
+                padding: EdgeInsets.all(0)
+              )
+            )
+          ],
+        ),
+      )
     );
   }
 }
