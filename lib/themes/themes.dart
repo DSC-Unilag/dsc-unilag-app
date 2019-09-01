@@ -14,7 +14,10 @@ class DSCTheme {
       scaffoldBackgroundColor: DSCColors.kBackgroundColor,
       cardColor: DSCColors.kBackgroundColor,
       errorColor: DSCColors.kErrorColor,
-      appBarTheme: base.appBarTheme.copyWith(brightness: Brightness.light),
+      appBarTheme: base.appBarTheme.copyWith(
+        color: DSCColors.kPrimaryColor,
+        brightness: Brightness.light,
+      ),
       primaryIconTheme: base.iconTheme.copyWith(
         color: DSCColors.kSecondaryColor,
       ),

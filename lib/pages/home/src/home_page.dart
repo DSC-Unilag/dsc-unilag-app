@@ -1,7 +1,11 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dsc_unilag_app/pages/home/widgets/filter_chips.dart';
+import 'package:dsc_unilag_app/pages/home/widgets/post_card.dart';
+import 'package:dsc_unilag_app/pages/home/widgets/top_category_card.dart';
 import 'package:dsc_unilag_app/themes/colors.dart';
 import 'package:dsc_unilag_app/widgets/dsc_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -74,8 +78,8 @@ class _HomePageContentState extends State<_HomePageContent> {
                 DSCFilterChip(
                   label: 'Cloud',
                   onPressed: () {},
-                  labelColor: DSCColors.kGoogleRedLetterColor,
-                  backgroundColor: DSCColors.kGoogleRedBackgroundColor,
+                  labelColor: DSCColors.kGoogleBlueLetterColor,
+                  backgroundColor: DSCColors.kGoogleBlueBackgroundColor,
                 ),
                 DSCFilterChip(
                   label: 'Mobile',
@@ -93,6 +97,155 @@ class _HomePageContentState extends State<_HomePageContent> {
             ),
           ),
         ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 6.0, horizontal: 12.0),
+            child: Text('Top Category',
+                style: TextStyle(fontSize: 23, fontWeight: FontWeight.w300)),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: CarouselSlider(
+            autoPlay: true,
+            autoPlayInterval: Duration(seconds: 3),
+            pauseAutoPlayOnTouch: Duration(seconds: 10),
+            height: 100.0,
+            enlargeCenterPage: true,
+            items: [1, 2, 3].map((i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Container(
+                    width: MediaQuery.of(context).size.width,
+                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    decoration: BoxDecoration(
+                        // color: Colors.amber
+                        ),
+                    child: TopCategoryCard(
+                      title:
+                          'How a became a mobile developer with Firebase and Flutter',
+                      author: 'Horpey Eureka',
+                      image: SvgPicture.asset(
+                          'assets/images/icons/ic_dsc_colored.svg',
+                          width: 13,
+                          height: 13),
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/article');
+                      },
+                    ),
+                  );
+                },
+              );
+            }).toList(),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
+            child: Text('Recent Post',
+                style: TextStyle(fontSize: 23, fontWeight: FontWeight.w300)),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: ListView(
+            padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 4.0),
+            primary: false,
+            shrinkWrap: true,
+            children: <Widget>[
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+              PostCard(
+                title: 'Mobile Database Persistence',
+                author: 'Lorem Ipsum',
+                image:
+                    SvgPicture.asset('assets/images/icons/ic_dsc_colored.svg'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/article');
+                },
+              ),
+            ],
+          ),
+        )
       ],
     );
   }

@@ -4,16 +4,19 @@ class TopCategoryCard extends StatelessWidget {
   final String title;
   final String author;
   final Widget image;
+  final VoidCallback onTap;
 
-  TopCategoryCard({this.title, this.author, this.image});
+  TopCategoryCard({this.title, this.author, this.image, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 300,
-        child: Card(
-          clipBehavior: Clip.antiAlias,
-          elevation: 2,
+      width: 300,
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        elevation: 2,
+        child: InkWell(
+          onTap: onTap,
           child: ListTile(
             leading: Container(
               width: 50,
@@ -27,6 +30,8 @@ class TopCategoryCard extends StatelessWidget {
             subtitle: Text(this.author, style: TextStyle(color: Colors.red)),
             isThreeLine: true,
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
