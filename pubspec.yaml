@@ -59,10 +59,10 @@ flutter:
     - assets/images/logos/lg_dsc_black.png
 
   fonts:
-  - family: Roboto
-    fonts:
-    - asset: fonts/Roboto-Medium.ttf
-    - asset: fonts/Roboto-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Medium.ttf
+        - asset: fonts/Roboto-Regular.ttf
 
   # fonts:
   #   - family: Schyler

@@ -38,7 +38,7 @@ class PostCard extends StatelessWidget {
                   children: <Widget>[
                     //tags
                     TagButton('Web'),
-                    TagButton('Firebase'),
+                    TagButton('Firebase'),  
                   ]
                 )
               ]

@@ -1,25 +1,31 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = const Color(0xFFFFFFFF);
-const kPrimaryLightColor = const Color(0xFFFFFFFF);
-const kPrimaryDarkColor = const Color(0xFFCCCCCC);
-const kSecondaryLightColor = const Color(0xFF7487FF);
-const kSecondaryColor = const Color(0xFF2F5AE7);
-const kSecondaryDarkColor = const Color(0xFF0032B4);
+class DSCColors {
+  static const kPrimaryColor = const Color(0xFFFFFFFF);
+  static const kPrimaryLightColor = const Color(0xFFFFFFFF);
+  static const kPrimaryDarkColor = const Color(0xFFCCCCCC);
+  static const kSecondaryLightColor = const Color(0xFF7487FF);
+  static const kSecondaryColor = const Color(0xFF2F5AE7);
+  static const kSecondaryDarkColor = const Color(0xFF0032B4);
 
-const kTextOnPrimaryColor = const Color(0xFF637282);
-const kTextOnSecondaryColor = const Color(0xFFFFFFFF);
+  static const kTextOnPrimaryColor = const Color(0xFF637282);
+  static const kTextOnSecondaryColor = const Color(0xFFFFFFFF);
 
-const kErrorColor = const Color(0xFFFFE5DA);
-const kTextOnErrorColor = const Color(0xFFFD8D9B);
+  static const kErrorColor = const Color(0xFFFFE5DA);
+  static const kTextOnErrorColor = const Color(0xFFFD8D9B);
 
-const kSuccessColor = const Color(0xFFCCFFE7);
-const kTextOnSuccessColor = const Color(0xFF4AA277);
+  static const kSuccessColor = const Color(0xFFCCFFE7);
+  static const kTextOnSuccessColor = const Color(0xFF4AA277);
 
-const kBackgroundColor = Colors.white;
+  static const kBackgroundColor = Colors.white;
 
+  static const kGoogleBlueLetterColor = const Color(0xFF4285F4);
+  static const kGoogleRedLetterColor = const Color(0xFFDB4437);
+  static const kGoogleYellowLetterColor = const Color(0xFFF4B400);
+  static const kGoogleGreenLetterColor = const Color(0xFF0F9D58);
 
-const kFirstLetter = const Color(0xFF557DBF);
-const kSecondLetter = const Color(0xFFFBBC12);
-const kThirdLetter = const Color(0xFFE1382B);
-const kFourthLetter = const Color(0xFF189E59);
+  static const kGoogleBlueBackgroundColor = const Color(0xFFE4F2FF);
+  static const kGoogleRedBackgroundColor = const Color(0xFFFDEBEE);
+  static const kGoogleYellowBackgroundColor = const Color(0xFFFDF8E1);
+  static const kGoogleGreenBackgroundColor = const Color(0xFFE5F5EB);
+}
