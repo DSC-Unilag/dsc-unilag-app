@@ -27,6 +27,7 @@ dependencies:
   bloc: ^0.15.0
   flutter_bloc: ^0.21.0
   flutter_svg: ^0.14.0
+  carousel_slider: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -58,10 +59,10 @@ flutter:
     - assets/images/logos/lg_dsc_black.png
 
   fonts:
-  - family: Roboto
-    fonts:
-    - asset: fonts/Roboto-Medium.ttf
-    - asset: fonts/Roboto-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Medium.ttf
+        - asset: fonts/Roboto-Regular.ttf
 
   # fonts:
   #   - family: Schyler
