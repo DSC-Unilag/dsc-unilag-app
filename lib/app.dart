@@ -1,6 +1,6 @@
 import 'package:dsc_unilag_app/screens/HomeScreen/index.dart';
 import 'package:dsc_unilag_app/pages/article/article.dart';
-import 'package:dsc_unilag_app/pages/index.dart';
+// import 'package:dsc_unilag_app/pages/index.dart';
 import 'package:dsc_unilag_app/themes/themes.dart';
 import 'package:flutter/material.dart';
 
