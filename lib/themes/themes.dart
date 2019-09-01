@@ -5,32 +5,32 @@ class DSCTheme {
   static ThemeData buildLightTheme() {
     final ThemeData base = ThemeData.light();
     return base.copyWith(
-      primaryColor: kPrimaryColor,
-      primaryColorDark: kPrimaryDarkColor,
-      primaryColorLight: kPrimaryDarkColor,
-      accentColor: kSecondaryColor,
-      textSelectionColor: kSecondaryLightColor,
-      textSelectionHandleColor: kSecondaryDarkColor,
-      scaffoldBackgroundColor: kBackgroundColor,
-      cardColor: kBackgroundColor,
-      errorColor: kErrorColor,
+      primaryColor: DSCColors.kPrimaryColor,
+      primaryColorDark: DSCColors.kPrimaryDarkColor,
+      primaryColorLight: DSCColors.kPrimaryDarkColor,
+      accentColor: DSCColors.kSecondaryColor,
+      textSelectionColor: DSCColors.kSecondaryLightColor,
+      textSelectionHandleColor: DSCColors.kSecondaryDarkColor,
+      scaffoldBackgroundColor: DSCColors.kBackgroundColor,
+      cardColor: DSCColors.kBackgroundColor,
+      errorColor: DSCColors.kErrorColor,
       appBarTheme: base.appBarTheme.copyWith(brightness: Brightness.light),
       primaryIconTheme: base.iconTheme.copyWith(
-        color: kSecondaryColor,
+        color: DSCColors.kSecondaryColor,
       ),
       buttonTheme: base.buttonTheme.copyWith(
-        buttonColor: kSecondaryColor,
+        buttonColor: DSCColors.kSecondaryColor,
         textTheme: ButtonTextTheme.normal,
       ),
       textTheme: _buildTextTheme(base.textTheme),
       primaryTextTheme: _buildTextTheme(base.textTheme),
-      accentTextTheme:
-          _buildTextTheme(base.textTheme, color: kTextOnSecondaryColor),
+      accentTextTheme: _buildTextTheme(base.textTheme,
+          color: DSCColors.kTextOnSecondaryColor),
     );
   }
 
   static TextTheme _buildTextTheme(TextTheme base,
-      {Color color = kTextOnPrimaryColor}) {
+      {Color color = DSCColors.kTextOnPrimaryColor}) {
     return base
         .copyWith(
           headline: base.headline.copyWith(
